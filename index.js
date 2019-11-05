@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
 const connection = require("./database/database");
+
 const categoriesController = require("./categories/CategoriesController");
 const articlesController = require("./articles/ArticlesController");
+
+const Article = require("./articles/Article");
+const Category = require("./categories/Category");
 
 // Express body-parser
 app.use(express.urlencoded({ extended: false }));
